@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block conteudo %}
+    <main class="container">
+        <h2>SISTEMA DO LOCAL CERTO</h2>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">CADASTRAR PRODUTO E CATEGORIA</h5>
+                  <p class="card-text">Cadastrar produto para que seja adicionado um novo produto no sistema assim poderá ter um controle do estoque e vendas desse produto, lembrando que é preciso adicionar as categorias primeiro.</p>
+                  <a href="{% url 'cadastrar_produto' %}" class="btn btn-primary">CADASTRAR PRODUTO</a>
+                  <a href="{% url 'cadastro_categoria' %}" class="btn btn-info">CADASTRAR CATEGORIA</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">CADASTRAR DE OS E SERVIÇOS</h5>
+                  <p class="card-text">Cadastrar serviços para serem emitos ordem de serviços. </p>
+                  <a href="{%url 'ordem_servico_create' %}" class="btn btn-primary">CADASTRAR OS</a>
+                  <a href="{%url 'cadastrar_servico' %}" class="btn btn-info">CADASTRAR SERVIÇO</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">PRODUTOS E CATEGORIA</h5>
+                  <p class="card-text">Lista de produtos cadastrados e categorias cadastradas no sistema, será redirecionados aos produtos cadastrados mesmo que não houver estoque.</p>
+                  <a href="{% url 'home_estoque' %}" class="btn btn-primary">PRODUTOS CADASTRADOS</a>
+                  <a href="{% url 'cadastro_categoria' %}" class="btn btn-info">CATEGORIA CADASTRADAS</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">COMPRAR PRODUTOS</h5>
+                  <p class="card-text">Compra de produtos.</p>
+                  <a href="{url 'compra_de_produtos' %}" class="btn btn-primary">COMPRAR PRODUTOS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">CLIENTE</h5>
+                  <p class="card-text">Cadastro de cliente para redirecionar vendas e controles como garantia do cliente e relatórios afins.</p>
+                  <a href="{%url 'clientes' %}" class="btn btn-primary"> CLIENTE CADASTRADOS</a>
+                  <a href="{%url 'cadastrar_cliente' %}" class="btn btn-info">CADASTRAR CLIENTE</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">VENDER PRODUTO</h5>
+                  <p class="card-text">Venda de produtos, tirando do estoque o valor necessário.</p>
+                  <a href="{ url 'venda_de_produtos' %}" class="btn btn-primary">Vender produto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+<!-- ordem_servico_detail.html -->
+{% extends "base.html" %}
+
+{% block conteudo %}
+<br><br>
+<div class="container">
+  <img src="/static/img/check-box_6399627.png" height="50" width="50">
+  <h4>OS Nº: {{ object.pk }}</h4>
+
+  <h5>Cliente: {{ object.cliente }} </h5><B>Data: {{ object.data|date:"d/m/Y" }}</B>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th>Valor</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    
+        <tr>
+          <td><b>Serviço: </b> {{ object.servico.servico }}</td>
+          <td> </td>
+          <td><b>Custo: </b>R$: {{ object.valor_custo }}</td>
+        </tr>
+      
+        <TR>
+          <td>
+            <b>Produto utilizado: </b> {{object.produto}}
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            <b>Cobrado: </b>R$: {{ object.valor }} 
+           </td>
+        </TR>
+        
+    <tr>
+     
+      <td>
+       <b> Observação: </b>{{object.observacao}}
+      </td>
+      <td>
+       </td>
+       <td>
+        <b>LUCROU : </b>{{object.valor_lucro}}
+       </td>
+    </tr>
+   
+    </tbody>
+  </table>
+</div>
+{% endblock conteudo %}
